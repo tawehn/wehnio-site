@@ -1,3 +1,8 @@
 .latestPosts {
   text-align: center;
 }
+
+.postEntry {
+  width:50%;
+  float:left;
+}

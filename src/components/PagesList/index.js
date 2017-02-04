@@ -10,13 +10,15 @@ const PagesList = ({ pages }) => {
       {
       pages.length
       ? (
-        <ul className={ styles.list }>
+        <div className={ styles.list }>
           {
           pages.map((page) => (
-            <li key={ page.title }><PagePreview { ...page } /></li>
+            <div className={styles.listItem}>
+              <PagePreview { ...page } />
+            </div>
           ))
         }
-        </ul>
+        </div>
       )
       : "No posts yet."
     }

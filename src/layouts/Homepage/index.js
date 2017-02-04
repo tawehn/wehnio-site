@@ -5,9 +5,15 @@ import Page from "../Page"
 
 const Homepage = (props) => {
   return (
+    <div>
+
     <Page { ...props }>
-      <LatestPosts />
+    
+    <LatestPosts numberOfPosts="2" />
+
     </Page>
+    </div>
+
   )
 }
 

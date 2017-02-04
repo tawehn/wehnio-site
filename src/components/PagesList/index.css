@@ -1,7 +1,11 @@
 .list {
-  display: flex;
-  flex-direction: column;
+    display: block;
+    list-style: none;
+    padding: 0;
+}
 
-  list-style: none;
-  padding: 0;
+.listItem {
+    width: 50%;
+    display: block;
+    float: left;
 }

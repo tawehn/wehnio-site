@@ -1,11 +1,15 @@
 import React, { PropTypes } from "react"
 import Helmet from "react-helmet"
 import warning from "warning"
-import { BodyContainer, joinUri, Link } from "phenomic"
+import {
+  BodyContainer,
+  joinUri,
+//  Link
+} from "phenomic"
 
-import Button from "../../components/Button"
+//import Button from "../../components/Button"
 import Loading from "../../components/Loading"
-
+import PageTitle from "../../components/PageTitle"
 import styles from "./index.css"
 
 const Page = (
@@ -19,9 +23,9 @@ const Page = (
     footer,
     children,
   },
-  {
-    metadata: { pkg },
-  }
+//  {
+//    metadata: { pkg },
+//  }
 ) => {
   warning(
     typeof head.title === "string",
@@ -42,11 +46,6 @@ const Page = (
     },
     { property: "og:image", content: socialImage },
     { property: "og:description", content: head.description },
-    { name: "twitter:card", content: "summary" },
-    { name: "twitter:title", content: metaTitle },
-    { name: "twitter:creator", content: `@${ pkg.twitter }` },
-    { name: "twitter:description", content: head.description },
-    { name: "twitter:image", content: socialImage },
     { name: "description", content: head.description },
   ]
 
@@ -56,28 +55,9 @@ const Page = (
         title={ metaTitle }
         meta={ meta }
       />
-      {
-        <div
-          className={ styles.hero }
-          style={ head.hero && {
-            background: `#111 url(${ head.hero }) 50% 50% / cover`,
-          } }
-        >
-          <div className={ styles.header }>
-            <div className={ styles.wrapper }>
-              <h1 className={ styles.heading }>{ head.title }</h1>
-              {
-                head.cta &&
-                <Link to={ head.cta.link }>
-                  <Button className={ styles.cta } light { ...head.cta.props }>
-                    { head.cta.label }
-                  </Button>
-                </Link>
-              }
-            </div>
-          </div>
-        </div>
-      }
+      <PageTitle title={head.title} subtitle={head.subtitle} />
+      { children }
+
       <div className={ styles.wrapper + " " + styles.pageContent }>
         { header }
         <div className={ styles.body }>
@@ -87,7 +67,6 @@ const Page = (
             : <BodyContainer>{ body }</BodyContainer>
           }
         </div>
-        { children }
         { footer }
       </div>
     </div>

@@ -1,0 +1,22 @@
+.header {
+    background-color: var(--colorSecondary);
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.heading {
+    color: var(--colorNeutralLight);
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 0.25em;
+}
+
+.headingSubtitle {
+    color: var(--colorNeutralLight);
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 20px;
+}
