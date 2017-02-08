@@ -35,7 +35,7 @@ body {
 
 html {
     min-height: 100%;
-    background: color(var(--colorPrimary) l(99%));
+    background: color(var(--colorBackground));
 }
 
 body {
