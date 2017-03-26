@@ -40,7 +40,6 @@
   opacity: 0.8;
   transition: 0.4s all;
   border-bottom: 1px solid transparent;
-  font-weight: bold;
 
   &:hover,
   &:focus {
@@ -58,3 +57,16 @@
   height: 14px;
   vertical-align: middle;
 }
+
+.activeLink {
+  font-weight: bold;
+  color: var(--colorNeutral);
+}
+
+@media (max-width: 500px) { 
+  .NavPart2ItemText {
+    display: none;
+  }
+}
+
+
