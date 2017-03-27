@@ -10,7 +10,7 @@
   right: 0;
 
   color: var(--colorNeutralLight);
-  background-color:var(--colorPrimary);
+  background-color:var(--colorPrimaryDark);
   z-index: 999;
 
 }
@@ -40,7 +40,7 @@
   opacity: 0.8;
   transition: 0.4s all;
   border-bottom: 1px solid transparent;
-
+  text-transform: uppercase;
   &:hover,
   &:focus {
     color: inherit;
@@ -60,7 +60,7 @@
 
 .activeLink {
   font-weight: bold;
-  color: var(--colorNeutral);
+  color: var(--colorSecondary);
 }
 
 @media (max-width: 500px) { 
