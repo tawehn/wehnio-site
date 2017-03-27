@@ -1,9 +1,7 @@
-import React, {PropTypes} from "react"
+import React, { PropTypes } from "react"
 
-import LatestPosts from "../../components/LatestPosts"
 import Page from "../Page"
-
-import styles from "./index.css"
+import LatestPosts from "../../components/LatestPosts"
 
 const Post = (props) => {
     // it's up to you to choose what to do with this layout ;)
@@ -12,14 +10,12 @@ const Post = (props) => {
         : null
 
     return (
-        <Page { ...props } header={< div > <header className={styles.header}>
-            {pageDate && <h5 key={pageDate.toISOString()}>
-                {pageDate.toDateString()}
-            </h5>}
-        </header> < /div>}>
-            <hr/>
-            <LatestPosts/>
-        </Page>
+        <div>
+            <Page subtitle={pageDate} { ...props } >
+            </Page>
+            <LatestPosts numberOfPosts="2" />
+        </div >
+
     )
 }
 

@@ -7,7 +7,9 @@ return (
   <div className={ styles.header }>
     <h1 className={ styles.heading }>{ props.title }</h1>
     <small className={ styles.headingSubtitle }>{ props.subtitle }</small>
+    <hr className={styles.headingLine} />
   </div>
+
 );
 }
 

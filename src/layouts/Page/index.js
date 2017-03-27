@@ -56,11 +56,11 @@ const Page = (
         meta={ meta }
       />
       <PageTitle title={head.title} subtitle={head.subtitle} />
-      { children }
 
       <div className={ styles.wrapper + " " + styles.pageContent }>
         { header }
         <div className={ styles.body }>
+        { children }
           {
             isLoading
             ? <Loading />

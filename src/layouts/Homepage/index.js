@@ -9,9 +9,10 @@ const Homepage = (props) => {
 
     <Page { ...props }>
     
-    <LatestPosts numberOfPosts="2" />
 
     </Page>
+        <LatestPosts numberOfPosts="2" />
+
     </div>
 
   )
