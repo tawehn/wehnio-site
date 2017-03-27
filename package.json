@@ -4,12 +4,14 @@
   "homepage": "http://wehn.io",
   "twitter": "",
   "repository": "https://github.com/tawehn",
+  "linkedin": "https://www.linkedin.com/in/alex-wehn-567003116/",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
     "lint": "npm-run-all --parallel lint:*",
     "start": "phenomic start",
     "build": "phenomic build",
+    "deploy": "aws s3 rm s3://wehn.io --recursive && aws s3 cp dist s3://wehn.io --recursive",
     "pretest": "npm run lint",
     "test": "npm run build"
   },
@@ -40,7 +42,7 @@
       },
       "production": {
         "presets": [
-          "babel-preset-react-optimize",
+         "babel-preset-react-optimize",
           "babel-preset-latest",
           "babel-preset-stage-1",
           "babel-preset-react"
