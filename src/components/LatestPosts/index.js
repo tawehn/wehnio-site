@@ -3,7 +3,9 @@ import enhanceCollection from "phenomic/lib/enhance-collection"
 
 import PagesList from "../../components/PagesList"
 
-import styles from "./index.css"
+import styles from './index.css';
+
+//import styles from "./index.css"
 
 const defaultNumberOfPosts = 6
 
@@ -17,10 +19,7 @@ const LatestPosts = (props, {collection}) => {
     }).slice(0, props.numberOfPosts || defaultNumberOfPosts)
 
     return (
-        <div>
-            <h2 className={styles.latestPosts}>
-                {"Latest Posts"}
-            </h2>
+        <div className={ styles.wrapper}>
             <PagesList pages={latestPosts}/>
         </div>
     )
