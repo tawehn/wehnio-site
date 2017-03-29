@@ -50,8 +50,7 @@
 }
 
 .link svg {
-  fill: currentColor;
-  opacity: 0.5;
+  fill: var(--colorSecondary);
   margin-right: 0.5rem;
   width: 14px;
   height: 14px;

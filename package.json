@@ -5,6 +5,7 @@
   "twitter": "",
   "repository": "https://github.com/tawehn",
   "linkedin": "https://www.linkedin.com/in/alex-wehn-567003116/",
+  "email": "alex@wehn.io",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",

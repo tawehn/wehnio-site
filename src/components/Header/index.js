@@ -4,6 +4,7 @@ import Svg from "react-svg-inline"
 
 import gitHubSvg from "../icons/iconmonstr-github-1.svg"
 import linkedinSvg from "../icons/iconmonstr-linkedin-2.svg"
+import emailSvg from "../icons/iconmonstr-email-1.svg"
 
 import styles from "./index.css"
 
@@ -19,15 +20,17 @@ const Header = (props, { metadata: {
                     <Link className={styles.link} to={"/posts"} activeClassName={styles.activeLink}>
                         {"Posts"}
                     </Link>
-                    <Link className={styles.link} to={"/lab"} activeClassName={styles.activeLink}>
-                        {"Lab"}
-                    </Link>
+
                     <Link className={styles.link} to={"/resume"} activeClassName={styles.activeLink}>
                         {"Resume"}
                     </Link>
                 </div>
 
                 <div className={styles.navPart2}>
+                    {pkg.email && <a href={'mailto:'+pkg.email} className={styles.link} >
+                        <Svg svg={emailSvg} cleanup /> <span className={styles.NavPart2ItemText}>{"Email"}</span>
+                    </a>
+                    }
                     {pkg.repository && <a href={pkg.repository} className={styles.link} target="github">
                         <Svg svg={gitHubSvg} cleanup /> <span className={styles.NavPart2ItemText}>{"GitHub"}</span>
                     </a>
