@@ -1,14 +1,12 @@
 .header {
     color: var(--colorPrimaryDark);
     text-align: center;
-    padding-top: 1em;
-    padding-bottom: 0em;
-    padding-left: 1em;
-    padding-right: 1em;
     line-height: 2.5em;
-    margin-top: 2em;
-    margin-left: 3em;
-    margin-right: 3em;
+    padding-top: 2em;
+    padding-bottom: 0em;
+    padding-left: .50em;
+    padding-right: .50em;
+
 }
 
 .heading {
