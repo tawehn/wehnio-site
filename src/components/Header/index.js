@@ -27,10 +27,6 @@ const Header = (props, { metadata: {
                 </div>
 
                 <div className={styles.navPart2}>
-                    {pkg.email && <a href={'mailto:'+pkg.email} className={styles.link} >
-                        <Svg svg={emailSvg} cleanup /> <span className={styles.NavPart2ItemText}>{"Email"}</span>
-                    </a>
-                    }
                     {pkg.repository && <a href={pkg.repository} className={styles.link} target="github">
                         <Svg svg={gitHubSvg} cleanup /> <span className={styles.NavPart2ItemText}>{"GitHub"}</span>
                     </a>
