@@ -1,16 +1,19 @@
 import React, { PropTypes } from "react"
-
 import styles from "./index.css"
 
 const PageTitle = (props) => {
-return (
-  <div className={ styles.header }>
-    <h1 className={ styles.heading }>{ props.title }</h1>
-    <small className={ styles.headingSubtitle }>{ props.subtitle }</small>
-    <hr className={styles.headingLine} />
-  </div>
+  return (
+    <div className={styles.header}>
+      <div className={[styles.bar, styles.barLeft].join(' ')}></div>
+      <div className={[styles.bar, styles.barRight].join(' ')}></div>
+      <h1 className={styles.heading}>{props.title}</h1>
+      <span className={styles.headingSubtitle}>{props.subtitle}</span>
+    </div>
 
-);
+
+
+
+  );
 }
 
 PageTitle.propTypes = {

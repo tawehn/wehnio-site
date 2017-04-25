@@ -1,31 +1,108 @@
 .header {
+    margin-top:33px;
     color: var(--colorPrimaryDark);
     text-align: center;
     line-height: 2.5em;
-    padding-top: 2em;
-    padding-bottom: 0em;
-    padding-left: .50em;
-    padding-right: .50em;
-
+    padding-top: 1em;
+    padding-bottom:1em;
+    background-color: color(var(--colorSecondary) l(80%) );
+    box-shadow: inset 0px 0px 15px rgba(0,0,0,0.9);
+    overflow:hidden;
+    padding-left:5px;
+    padding-right:5px;
+    font-weight: bold;
 }
 
 .heading {
     letter-spacing: 1px;
     text-align: center;
-    margin-bottom: 0.25em;
+    z-index: 0;
+    font-size:45px;
+    margin-bottom:5px;
+    margin-top:15px;
 }
 
 .headingSubtitle {
     color: var(--colorPrimaryDark);
-    letter-spacing: 1px;
+    position: relative;
     text-align: center;
-    font-size: 25px;
+    z-index: 0;
+    font-size:25px;
+
 }
 
-.headingLine {
-        background-color: var(--colorSecondary);
-        height:5px;
-        opacity: 0.5;
+.bar {
+    background-color:var(--colorAccent);
+    z-index:99;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    margin-top:-5em;
+    margin-left:-1em;
+    margin-right:-1em;
+    width:150%;
+    height:50px;
+    animation-iteration-count: infinite;
+    animation-timing-function:  ease-in-out; 
+
+}
+
+.barLeft {
+    transform-origin: left;
+    float:left;
+    animation-duration: 30s;
+    animation-delay:0s;
+    animation-name: leftBarDrift;
+}
+
+.barRight {
+    transform-origin: right;
+    float:right;
+    animation-duration: 15s;
+    animation-delay:0s;
+    animation-name: rightBarDrift;
+}
 
 
+
+@media (min-width: 701px) {
+@keyframes leftBarDrift {
+	0% {
+        transform: rotate(25deg);   
+	}
+    50% {
+        transform: rotate(20deg);
+	}
+	100% {
+        transform: rotate(25deg);
+	}
+}
+
+@keyframes rightBarDrift {
+	0% {
+        transform: rotate(-60deg);   
+	}
+    50% {
+        transform: rotate(-70deg);
+	}
+	100% {
+        transform: rotate(-60deg);
+	}
+}
+}
+
+@media (max-width: 700px) {
+    @keyframes leftBarDrift {
+	0% {
+        transform: rotate(55deg);   
+	}
+    50% {
+        transform: rotate(45deg);
+	}
+	100% {
+        transform: rotate(55deg);
+	}
+}
+
+    .barRight {
+        display:none;
+    }
 }
