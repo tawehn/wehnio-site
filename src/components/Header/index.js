@@ -54,7 +54,7 @@ class Header extends React.Component {
                         <Svg svg={gitHubSvg} cleanup /> <span className={styles.NavPart2ItemText}>{"GitHub"}</span>
                     </a>
                     }
-                    {this.context.metadata.pkg.linkedin && <a href={this.context.metadata.linkedin} className={styles.link} target="linkedin">
+                    {this.context.metadata.pkg.linkedin && <a href={this.context.metadata.pkg.linkedin} className={styles.link} target="linkedin">
                         <Svg svg={linkedinSvg} cleanup /> <span className={styles.NavPart2ItemText}>{"LinkedIn"}</span>
                     </a>
                     }
