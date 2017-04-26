@@ -1,16 +1,18 @@
 .header {
-    margin-top:33px;
+    padding-top:48px;
     color: var(--colorPrimaryDark);
     text-align: center;
     line-height: 2.5em;
-    padding-top: 1em;
-    padding-bottom:1em;
+    padding-bottom:4em;
     background-color: color(var(--colorSecondary) l(80%) );
     box-shadow: inset 0px 0px 15px rgba(0,0,0,0.9);
     overflow:hidden;
     padding-left:5px;
     padding-right:5px;
     font-weight: bold;
+    z-index: 9;
+    position:relative;
+    width:100%;
 }
 
 .heading {
@@ -28,7 +30,6 @@
     text-align: center;
     z-index: 0;
     font-size:25px;
-
 }
 
 .bar {
@@ -41,14 +42,13 @@
     width:150%;
     height:50px;
     animation-iteration-count: infinite;
-    animation-timing-function:  ease-in-out; 
-
+    animation-timing-function:  ease-in-out;
 }
 
 .barLeft {
     transform-origin: left;
     float:left;
-    animation-duration: 30s;
+    animation-duration: 25s;
     animation-delay:0s;
     animation-name: leftBarDrift;
 }
@@ -56,12 +56,10 @@
 .barRight {
     transform-origin: right;
     float:right;
-    animation-duration: 15s;
+    animation-duration: 10s;
     animation-delay:0s;
     animation-name: rightBarDrift;
 }
-
-
 
 @media (min-width: 701px) {
 @keyframes leftBarDrift {
