@@ -12,7 +12,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "start": "phenomic start",
     "build": "phenomic build",
-    "deploy": "aws s3 rm s3://wehn.io --recursive && aws s3 cp dist s3://wehn.io --recursive",
+    "deploy": "aws s3 rm s3://www.wehn.io --recursive && aws s3 cp dist s3://www.wehn.io --recursive",
     "pretest": "npm run lint",
     "test": "npm run build"
   },
@@ -43,7 +43,7 @@
       },
       "production": {
         "presets": [
-         "babel-preset-react-optimize",
+          "babel-preset-react-optimize",
           "babel-preset-latest",
           "babel-preset-stage-1",
           "babel-preset-react"
@@ -132,6 +132,8 @@
     "warning": "^3.0.0",
     "webpack": "^1.11.0",
     "whatwg-fetch": "^0.11.0",
-    "phenomic": "^0.20.3"
+    "phenomic": "^0.20.3",
+    "classnames": "^2.2.5"
+
   }
 }
