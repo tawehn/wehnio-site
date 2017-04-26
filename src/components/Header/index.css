@@ -65,8 +65,7 @@
 
 
 .activeLink {
-  font-weight: bold;
-  color: var(--colorSecondary);
+  font-weight: 900;
 }
 
 @media (max-width: 500px) { 
