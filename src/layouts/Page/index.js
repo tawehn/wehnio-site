@@ -32,7 +32,7 @@ const Page = (
     `Your page '${ __filename }' needs a title`
   )
 
-  const metaTitle = head.metaTitle ? head.metaTitle : head.title
+  const metaTitle = head.metaTitle ? head.metaTitle : head.title + " | Wehn.io"
 
   const socialImage = head.hero && head.hero.match("://") ? head.hero
     : joinUri(process.env.PHENOMIC_USER_URL, head.hero)
