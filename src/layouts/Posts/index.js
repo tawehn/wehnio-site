@@ -12,7 +12,7 @@ const Posts = (props) => {
     return (
         <div>
             <Page subtitle={pageDate} { ...props } >
-                <LatestPosts numberOfPosts="6" />
+                <LatestPosts numberOfPosts={6} />
             </Page>
         </div >
 
