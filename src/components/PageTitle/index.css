@@ -61,7 +61,7 @@
     animation-name: rightBarDrift;
 }
 
-@media (min-width: 701px) {
+@media (min-width: 501px) {
 @keyframes leftBarDrift {
 	0% {
         transform: rotate(25deg);   
@@ -87,7 +87,7 @@
 }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
     @keyframes leftBarDrift {
 	0% {
         transform: rotate(55deg);   
