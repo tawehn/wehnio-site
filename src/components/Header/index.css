@@ -63,9 +63,14 @@
   vertical-align: middle;
 }
 
-
 .activeLink {
   font-weight: 900;
+}
+
+@media print {
+  .header {
+    display:none;
+  }
 }
 
 @media (max-width: 500px) { 
