@@ -1,0 +1,61 @@
+
+@media(max-width:800px) {
+    .resumeContainer {
+        display:flex;
+        flex-direction: column;
+
+    }
+
+    .workExperience {
+        flex: 1;
+        width:100%;
+    }
+
+    .skillSection {
+        display:flex;
+        width:100%;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-content: stretch; 
+    }
+
+    .skillCard {
+        flex: 1;
+        margin-right:20px;
+        margin-left:20px;
+        margin-bottom: 15px;
+    }
+}
+
+@media(min-width:801px) {
+    .resumeContainer {
+        display:flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        flex-wrap:nowrap;
+
+
+    }
+    .workExperience {
+        flex: 3;
+        padding-left:1em;
+        padding-right:1em;
+    }
+
+    .skillSection {
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .skillCard {
+        margin-bottom:15px;
+
+    }
+}
+
+@media(max-width: 499px) {
+    .skillSection {
+        flex-direction: column;
+    }
+}

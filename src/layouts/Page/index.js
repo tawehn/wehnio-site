@@ -19,6 +19,7 @@ const Page = (
     __url,
     head,
     body,
+    customPageContent,
     header,
     footer,
     children,
@@ -60,12 +61,12 @@ const Page = (
       <div className={ styles.wrapper + " " + styles.pageContent }>
         { header }
         <div className={ styles.body }>
-        { children }
           {
             isLoading
             ? <Loading />
-            : <BodyContainer>{ body }</BodyContainer>
+            : (customPageContent ? customPageContent :  <BodyContainer>{body}</BodyContainer>)
           }
+          { children }
         </div>
         { footer }
       </div>
@@ -80,6 +81,7 @@ Page.propTypes = {
   __url: PropTypes.string,
   head: PropTypes.object.isRequired,
   body: PropTypes.string,
+  customPageContent: PropTypes.bool,
   header: PropTypes.element,
   footer: PropTypes.element,
 }

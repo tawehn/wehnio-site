@@ -8,13 +8,15 @@ import PageError from "./layouts/PageError"
 import Homepage from "./layouts/Homepage"
 import Post from "./layouts/Post"
 import Posts from "./layouts/Posts"
+import Resume from "./layouts/Resume"
 
 const PageContainer = (props) => (<PhenomicPageContainer { ...props } layouts={{
     Page,
     PageError,
     Homepage,
     Post,
-    Posts
+    Posts,
+    Resume
 }}/>)
 
 export default(
