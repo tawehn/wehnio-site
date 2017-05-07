@@ -3,8 +3,6 @@
     flex-direction: column;
     margin: 1rem auto;
     padding: 1rem 0;
-    border-left: 1px solid;
-    border-right: 1px solid;
     border-color: var(--colorSecondaryDark);
 }
 
@@ -20,7 +18,7 @@
 .meta {
     font-size: 0.75rem;
     opacity: 0.6;
-    align-self: center;
+    text-align: center;
 }
 
 @media(max-width:500px) {
@@ -38,6 +36,8 @@
     /* align-self: center; */
     display: block;
     margin-top: 1rem;
+    margin-right:2em;
+    margin-bottom:2em;
     border-radius: 3px;
     font-size: 0.8rem;
     text-align: center;

@@ -20,6 +20,7 @@ const LatestPosts = (props, {collection}) => {
 
     return (
         <div className={ styles.wrapper}>
+            <h2 className={styles.latestPostsText}>Latest Posts</h2>
             <PagesList pages={latestPosts}/>
         </div>
     )

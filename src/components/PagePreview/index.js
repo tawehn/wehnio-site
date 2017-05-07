@@ -1,4 +1,5 @@
 import React, { PropTypes } from "react"
+import Panel from "../Panel"
 import { Link } from "phenomic"
 
 import Button from "../../components/Button"
@@ -9,26 +10,26 @@ const PagePreview = ({ __url, title, date, description }) => {
   const pageDate = date ? new Date(date) : null
 
   return (
-    <div className={ styles.wrapper }>
-      <Link to={ __url } className={ styles.title }>
-        { title }
-      </Link>
-      <div className={ styles.meta }>
-        {
-          pageDate &&
-            <time key={ pageDate.toISOString() }>
-              { pageDate.toDateString() }
+    <div className={styles.wrapper}>
+      <Panel title={title}>
+        <div className={styles.meta}>
+          {
+            pageDate &&
+            <time key={pageDate.toISOString()}>
+              {pageDate.toDateString()}
             </time>
-        }
-      </div>
-      <div className={ styles.description }>
-        { description }
-        { " " }
-      </div>
+          }
+        </div>
+        <div className={styles.description}>
+          {description}
+          {" "}
+        </div>
 
-      <Link to={ __url } className={ styles.readMore }>
-        <Button secondary>{ "Read More →" }</Button>
-      </Link>
+        <Link to={__url} className={styles.readMore}>
+          <Button secondary>{"Read More →"}</Button>
+        </Link>
+      </Panel>
+
     </div>
   )
 }
