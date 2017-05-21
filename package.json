@@ -133,7 +133,5 @@
     "webpack": "^1.11.0",
     "whatwg-fetch": "^0.11.0",
     "phenomic": "^0.20.3",
-    "classnames": "^2.2.5"
-
   }
 }
