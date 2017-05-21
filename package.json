@@ -1,4 +1,5 @@
 {
+  "version": 1.0,
   "private": true,
   "name": "wehnio-site",
   "homepage": "http://wehn.io",
@@ -132,6 +133,6 @@
     "warning": "^3.0.0",
     "webpack": "^1.11.0",
     "whatwg-fetch": "^0.11.0",
-    "phenomic": "^0.20.3",
+    "phenomic": "^0.20.3"
   }
 }
