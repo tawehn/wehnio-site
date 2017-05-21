@@ -12,7 +12,7 @@
     "lint": "npm-run-all --parallel lint:*",
     "start": "phenomic start",
     "build": "phenomic build",
-    "deploy": "aws s3 rm s3://www.wehn.io --recursive && aws s3 cp dist s3://www.wehn.io --recursive",
+    "deploy": "aws s3 rm s3://www.wehn.io --recursive && aws s3 cp dist s3://www.wehn.io --recursive --acl public-read",
     "pretest": "npm run lint",
     "test": "npm run build"
   },
