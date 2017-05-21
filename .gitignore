@@ -4,5 +4,7 @@
 node_modules
 *.log
 
+content
+
 # phenomic build
 dist
