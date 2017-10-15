@@ -6,7 +6,7 @@ const ListPanel = (props) => {
     return (
         <Panel className={styles.wrapper} title={props.title}>
             <ul>
-                {props.items.map(i => <li>{i}</li>)}
+                {props.items.map(i => <li key={i}>{i}</li>)}
             </ul>
         </Panel>
     );

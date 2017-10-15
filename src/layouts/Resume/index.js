@@ -18,7 +18,7 @@ const Resume = (props) => {
             <div className={styles.skillCard}><ListPanel title="Tools" items={props.head.tools.split(',').sort()}></ListPanel></div>
           </div>
           <div className={styles.workExperience}>
-            <BodyContainer>{props.body}</BodyContainer>
+            <BodyContainer>{props.body || ''}</BodyContainer>
           </div>
         </div>
 
@@ -29,7 +29,7 @@ const Resume = (props) => {
 }
 
 Resume.propTypes = {
-  body: PropTypes.string.isRequired,
+  body: PropTypes.string,
   head: PropTypes.object
 }
 
