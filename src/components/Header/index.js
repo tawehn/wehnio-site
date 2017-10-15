@@ -26,7 +26,7 @@ class Header extends React.Component {
     }
 
     handleScroll(event) {
-        let scrollTop = event.srcElement.body.scrollTop;
+        let scrollTop = event.srcElement.body.scrollTop || window.scrollY; //https://bugs.chromium.org/p/chromium/issues/detail?id=766938
         if (scrollTop > 10) this.setState({ scrolled: true });
         else this.setState({ scrolled: false });
     }
